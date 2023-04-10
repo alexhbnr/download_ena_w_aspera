@@ -17,12 +17,14 @@ of Snakemake:
 
 To start the pipeline, run `snakemake` with the following command.
 
+```
 snakemake --config samplelist="samplelist_test.txt" \
                    outdir="bams" \
                    slot="submitted" \
                    protocol="aspera" \
                    aspera_path="/usr/local64/opt/aspera/connect"
     -j 1 --resources downloads=1
+```
 
 To allow more than one task to be executed, increase the value of the parameter `-j`, accordingly.
 In case more than one file should be downloaded at the same time, increase the number of parallel
